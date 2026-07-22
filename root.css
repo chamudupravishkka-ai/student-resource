@@ -1,0 +1,102 @@
+  
+  :root {
+  /* Primary chosen colors */
+  --color-orange: rgb(243, 113, 35);   /* Warm orange */
+  --color-pink: rgb(228, 66, 152);     /* Vibrant pink */
+  --color-teal: rgb(22, 169, 143);     /* Fresh teal */
+
+  /* Analogous shades (neighbors on the wheel) */
+  --color-orange-light: rgb(255, 153, 85);  /* Softer orange */
+  --color-pink-light: rgb(245, 120, 180);   /* Soft pink */
+  --color-teal-light: rgb(80, 200, 180);    /* Aqua-teal */
+
+  /* Complementary accents (opposites on the wheel) */
+  --color-orange-comp: rgb(35, 113, 243);   /* Blue accent */
+  --color-pink-comp: rgb(66, 228, 142);     /* Green accent */
+  --color-teal-comp: rgb(169, 22, 48);      /* Deep red accent */
+
+  /* Neutral supporting tones */
+  --color-dark: rgb(33, 33, 33);            /* Dark gray */
+  --color-light: rgb(245, 245, 245);        /* Light gray */
+  --color-muted: rgb(120, 120, 120);        /* Medium gray */
+}
+
+  html{
+    scroll-behavior: smooth;
+  }
+  .logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .offcanvas-body{
+     background: var(--color-light);
+  }
+  .offcanvas-body a{
+    color: var(--color-teal);
+  }
+  .navbar{
+      background: linear-gradient(to left, var(--color-orange), var(--color-pink), var(--color-teal));
+      background-size: 200% 200%;
+      
+      /* Animation */
+      animation: gradientShift 20s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+
+/* --- Core Interface Styles (Kept intact) --- */
+.caption-top-left {
+  position: absolute;
+  top: 20px;      
+  left: 20px;     
+  right: auto;
+  bottom: auto;
+  text-align: left;
+  z-index: 10;
+  max-width: 80%; /* Prevents text from hitting the right edge/controls */
+}
+
+.caption-top-left h2 {
+  margin-bottom: 0.5rem;
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
+/* --- RWD Enhancements (Ensures it scales perfectly) --- */
+#mainCarousel .carousel-inner {
+  height: 50vh;       /* Uses viewport height instead of a rigid min-height */
+  min-height: 300px;  /* Safety fallback for tiny screens */
+  max-height: 600px;  /* Keeps it from becoming too massive on ultrawide screens */
+}
+
+#mainCarousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;  /* Prevents images from distorting or stretching */
+}
+
+/* Fluid Typography using clamp() so text scales beautifully without breakages */
+.caption-top-left h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem) !important; 
+}
+
+.caption-top-left p {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem) !important;
+}
+
+/* --- Mobile Specific Tweaks --- */
+@media (max-width: 576px) {
+  .caption-top-left {
+    top: 15px;
+    left: 15px;
+    max-width: 75%;
+  }
+}
+
