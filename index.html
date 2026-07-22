@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- font awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!--Bootstrap css and js-->
+
+<link rel="stylesheet" type="text/css" href="css/root.css">
+<link rel="stylesheet" type="text/css" href="css/catdesign.css">
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+    <!-- Left: Navigation Icon -->
+    <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Center: Site Name -->
+    <a class="navbar-brand mx-auto" href="index.php">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM_nKRnlhxGC885bISffrD32AhY3exJDvkLqP94_zZRA&s=10" 
+           alt="" class="logo me-2">
+      MySite.com
+    </a>
+
+    <!-- Right: Logged User -->
+    <a href="profile.php" class="btn d-flex align-items-center">
+      <img src="https://thfvnext.bing.com/th/id/OIP.FMyovTACaroGNo0PkUvIqgHaHa?w=217&h=216&c=7&r=0&o=7&cb=thfvnextfalcon2&pid=1.7&rm=3" 
+           alt="" class="logo me-2"> Hello123
+      <!--<i class="bi bi-person-circle me-2"></i>-->
+      
+    </a>
+  </div>
+</nav>
+
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasNav" data-bs-scroll="true" data-bs-backdrop="true">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><img src="https://thfvnext.bing.com/th/id/OIP.FMyovTACaroGNo0PkUvIqgHaHa?w=217&h=216&c=7&r=0&o=7&cb=thfvnextfalcon2&pid=1.7&rm=3" 
+           alt="" class="logo me-2"> Hello123</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link " href="index.html"><i class="bi bi-house"></i> Home</a></li>
+      <li class="nav-item"><a class="nav-link " href="profile.html"><i class="bi bi-box-arrow-in-right"></i> Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link " href="friends.html"><i class="bi bi-box-arrow-in-right"></i> Friends</a></li>
+      <li class="nav-item"><a class="nav-link " href="upload.html"><i class="bi bi-upload"></i> Upload</a></li>
+      <li class="nav-item"><a class="nav-link " href="saved.html"><i class="bi bi-bookmark"></i> Saved</a></li>
+      <li class="nav-item"><a class="nav-link " href="history.html"><i class="bi bi-clock-history"></i> History</a></li>
+    </ul>
+  </div>
+</div>
+  <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="ban_img/ban1.webp" class="d-block w-100" alt="First Slide Image">
+      <div class="carousel-caption caption-top-left">
+        
+        <h2 class="fw-bold">First Slide</h2>
+        <p class="lead mb-0">Sidebar navigation in action.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="ban_img/ban2.webp" class="d-block w-100" alt="Second Slide Image">
+      <div class="carousel-caption caption-top-left">
+        <h2 class="fw-bold">Second Slide</h2>
+        <p class="lead mb-0">Bootstrap offcanvas is flexible.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="ban_img/ban3.webp" class="d-block w-100" alt="Third Slide Image">
+      <div class="carousel-caption caption-top-left">
+        <h2 class="fw-bold">Third Slide</h2>
+        <p class="lead mb-0">Perfect for side menus.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>  <div class="container my-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body p-4">
+      <!-- Header -->
+      <h2 class="text-center mb-4 text-primary fw-bold">
+        <i class="bi bi-search me-2"></i> Search Engine
+      </h2>
+
+      <!-- Search Form -->
+      <form method="get" action="search-results.php">
+        <div class="row g-3 justify-content-center align-items-center">
+         
+          <div class="col-12 col-md-9">
+            <div class="input-group input-group-lg shadow-sm rounded-3 overflow-hidden">
+              <span class="input-group-text bg-light text-muted border-0">
+                <i class="bi bi-search"></i>
+              </span>
+              <input class="form-control border-0 bg-light text-dark" type="search" placeholder="Search anything..." aria-label="Search" name="search">
+              
+              <button class="btn btn-primary border-0 px-3 px-sm-4" type="submit">
+                <i class="bi bi-arrow-right-circle-fill me-sm-1"></i> <span class="d-none d-sm-inline">Search</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 d-grid">
+            <button class="btn btn-outline-secondary btn-lg shadow-sm rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#filterOptions" aria-expanded="false" aria-controls="filterOptions">
+              <i class="bi bi-funnel-fill me-2"></i> Filters
+            </button>
+          </div>
+          
+        </div>
+
+        <!-- Collapsible Filter Section -->
+        <div class="collapse mt-3" id="filterOptions">
+          <div class="card card-body bg-light border-0 shadow-sm rounded-3">
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-semibold text-muted small text-uppercase">Category</label>
+                <select class="form-select border-0 shadow-sm" name="category">
+                  <option value="">All</option>
+                  <option value="articles">Articles</option>
+                  <option value="images">Images</option>
+                  <option value="videos">Videos</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-semibold text-muted small text-uppercase">Date Range</label>
+                <input type="date" class="form-control border-0 shadow-sm" name="date">
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label fw-semibold text-muted small text-uppercase">Sort By</label>
+                <select class="form-select border-0 shadow-sm" name="sort">
+                  <option value="relevance">Relevance</option>
+                  <option value="latest">Latest</option>
+                  <option value="popular">Most Popular</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>  <h2 class="text-center fw-bold mb-5 text-gradient">For You</h2>
+  <div class="container my-5">
+  
+  <div class="row g-4">
+    <!-- Card -->
+    <div class="col-lg-3 col-md-4 col-sm-6">
+      <div class="card shadow-sm h-100">
+
+        <!-- Icon area with overlays -->
+        <div class="position-relative text-center py-4 bg-light">
+          <!-- Large PDF icon -->
+          <i class="bi bi-file-earmark-pdf text-danger " style="font-size: 70px;"></i>
+
+          <!-- Favourite heart -->
+          <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+            <i class="bi bi-heart"></i>
+          </button>
+
+          <!-- Badge -->
+          <span class="badge bg-primary position-absolute top-0 start-0 m-2">PDF</span>
+        </div>
+
+        <!-- Card body -->
+        <div class="card-body">
+          <h6 class="card-title mb-1">Document Title</h6>
+          <p class="card-text small mb-2">Short description of the PDF.</p>
+
+          <!-- Meta info -->
+          <div class="d-flex align-items-center mb-2">
+            <img src="https://picsum.photos/40/40?random=10" class="rounded-circle me-2" alt="U">
+            <div>
+              <small class="text-muted">Uploader Name</small><br>
+              <small class="text-muted">12 Jun 2026</small>
+            </div>
+          </div>
+
+          <!-- Action button -->
+          <a href="#" class="btn btn-sm btn-danger">Open PDF</a>
+        </div>
+      </div>
+    </div>
+    <!-- Word Card -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="card shadow-sm h-100">
+    <div class="position-relative text-center py-4 bg-light">
+      <i class="bi bi-file-earmark-word text-primary" style="font-size: 70px;"></i>
+      <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+        <i class="bi bi-heart"></i>
+      </button>
+      <span class="badge bg-primary position-absolute top-0 start-0 m-2">Word</span>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title mb-1">Word Document</h6>
+      <p class="card-text small mb-2">Short description of the Word file.</p>
+      <div class="d-flex align-items-center mb-2">
+        <img src="https://picsum.photos/40/40?random=11" class="rounded-circle me-2" alt="U">
+        <div>
+          <small class="text-muted">Uploader Name</small><br>
+          <small class="text-muted">12 Jun 2026</small>
+        </div>
+      </div>
+      <a href="#" class="btn btn-sm btn-primary">Open Word</a>
+    </div>
+  </div>
+</div>
+
+<!-- Excel Card -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="card shadow-sm h-100">
+    <div class="position-relative text-center py-4 bg-light">
+      <i class="bi bi-file-earmark-excel text-success" style="font-size: 70px;"></i>
+      <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+        <i class="bi bi-heart"></i>
+      </button>
+      <span class="badge bg-success position-absolute top-0 start-0 m-2">Excel</span>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title mb-1">Excel Spreadsheet</h6>
+      <p class="card-text small mb-2">Short description of the Excel file.</p>
+      <div class="d-flex align-items-center mb-2">
+        <img src="https://picsum.photos/40/40?random=12" class="rounded-circle me-2" alt="U">
+        <div>
+          <small class="text-muted">Uploader Name</small><br>
+          <small class="text-muted">12 Jun 2026</small>
+        </div>
+      </div>
+      <a href="#" class="btn btn-sm btn-success">Open Excel</a>
+    </div>
+  </div>
+</div>
+
+<!-- PowerPoint Card -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="card shadow-sm h-100">
+    <div class="position-relative text-center py-4 bg-light">
+      <i class="bi bi-file-earmark-ppt text-warning" style="font-size: 70px;"></i>
+      <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+        <i class="bi bi-heart"></i>
+      </button>
+      <span class="badge bg-warning text-dark position-absolute top-0 start-0 m-2">PPT</span>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title mb-1">PowerPoint Presentation</h6>
+      <p class="card-text small mb-2">Short description of the PowerPoint file.</p>
+      <div class="d-flex align-items-center mb-2">
+        <img src="https://picsum.photos/40/40?random=13" class="rounded-circle me-2" alt="U">
+        <div>
+          <small class="text-muted">Uploader Name</small><br>
+          <small class="text-muted">12 Jun 2026</small>
+        </div>
+      </div>
+      <a href="#" class="btn btn-sm btn-warning text-dark">Open PPT</a>
+    </div>
+  </div>
+</div>
+
+<!-- ZIP Card -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="card shadow-sm h-100">
+    <div class="position-relative text-center py-4 bg-light">
+      <i class="bi bi-file-earmark-zip text-secondary" style="font-size: 70px;"></i>
+      <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle">
+        <i class="bi bi-heart"></i>
+      </button>
+      <span class="badge bg-secondary position-absolute top-0 start-0 m-2">ZIP</span>
+    </div>
+    <div class="card-body">
+      <h6 class="card-title mb-1">Compressed File</h6>
+      <p class="card-text small mb-2">Short description of the ZIP archive.</p>
+      <div class="d-flex align-items-center mb-2">
+        <img src="https://picsum.photos/40/40?random=14" class="rounded-circle me-2" alt="U">
+        <div>
+          <small class="text-muted">Uploader Name</small><br>
+          <small class="text-muted">12 Jun 2026</small>
+        </div>
+      </div>
+      <a href="#" class="btn btn-sm btn-secondary">Open ZIP</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Repeat more cards with same structure -->
+  </div>
+</div>
+  <div class="text-center mt-4">
+      <button class="btn btn-outline-primary" onclick="loadDocumentCards()">Load more..</button>
+      <script>
+        // Function to fetch data from PHP and render cards
+async function loadDocumentCards() {
+  const container = document.getElementById('hello123');
+  
+  if (!container) {
+    console.error("Target container #hello123 not found!");
+    return;
+  }
+
+  try {
+    const response = await fetch('get-documents.php');
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    // 2. Parse the JSON response
+    const documents = await response.json();
+
+    // 3. Loop through the array and append cards to the container
+    documents.forEach(doc => {
+      const cardHTML = `
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+
+            <!-- Icon area with overlays -->
+            <div class="position-relative text-center py-4 bg-light">
+              <!-- File Icon -->
+              <i class="bi ${doc.fileIcon || 'bi-file-earmark-pdf'} text-danger" style="font-size: 70px;"></i>
+
+              <!-- Favourite heart button -->
+              <button class="btn btn-light position-absolute top-0 end-0 m-2 p-1 rounded-circle" onclick="toggleFavorite(${doc.id})">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <!-- Badge -->
+              <span class="badge bg-primary position-absolute top-0 start-0 m-2">${escapeHtml(doc.fileType || 'PDF')}</span>
+            </div>
+
+            <!-- Card body -->
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h6 class="card-title mb-1">${escapeHtml(doc.title)}</h6>
+                <p class="card-text small mb-2 text-muted">${escapeHtml(doc.description)}</p>
+              </div>
+
+              <div>
+                <!-- Meta info -->
+                <div class="d-flex align-items-center mb-3 mt-2">
+                  <img src="${doc.uploaderAvatar || 'https://picsum.photos/40/40'}" class="rounded-circle me-2" width="40" height="40" alt="Avatar">
+                  <div>
+                    <small class="text-muted d-block fw-semibold">${escapeHtml(doc.uploaderName)}</small>
+                    <small class="text-muted">${escapeHtml(doc.uploadDate)}</small>
+                  </div>
+                </div>
+
+                <!-- Action button -->
+                <a href="${doc.fileUrl}" class="btn btn-sm btn-danger w-100" target="_blank">Open File</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+      // Append card to container
+      container.innerHTML += cardHTML;
+    });
+
+  } catch (error) {
+    console.error("Failed to load cards:", error);
+    container.innerHTML = `<div class="col-12 text-danger">Error loading documents. Please try again later.</div>`;
+  }
+}
+
+// Helper function to prevent XSS attacks when inserting user-generated text
+function escapeHtml(text) {
+  if (!text) return '';
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+      </script>
+    </div>
+  <div class="container my-5">
+  <!-- Title -->
+  <h2 class="text-center fw-bold mb-5 text-gradient">🌟 Explore Categories</h2>
+
+  <!-- Category Grid -->
+  <div class="row g-4">
+    <!-- Technology -->
+    <div class="col-lg-3 col-md-6">
+      <div class="category-card text-center p-4 shadow-lg h-100 rounded-4">
+        <div class="icon-wrapper bg-gradient-primary mb-3">
+          <i class="bi bi-laptop fs-1 text-white"></i>
+        </div>
+        <h5 class="fw-bold">Technology</h5>
+        <p class="small text-muted">Latest trends, gadgets, and innovations shaping the digital world.</p>
+      </div>
+    </div>
+
+    <!-- Environment -->
+    <div class="col-lg-3 col-md-6">
+      <div class="category-card text-center p-4 shadow-lg h-100 rounded-4">
+        <div class="icon-wrapper bg-gradient-success mb-3">
+          <i class="bi bi-tree fs-1 text-white"></i>
+        </div>
+        <h5 class="fw-bold">Environment</h5>
+        <p class="small text-muted">Sustainability, climate action, and green living practices.</p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="col-lg-3 col-md-6">
+      <div class="category-card text-center p-4 shadow-lg h-100 rounded-4">
+        <div class="icon-wrapper bg-gradient-warning mb-3">
+          <i class="bi bi-book fs-1 text-white"></i>
+        </div>
+        <h5 class="fw-bold">Education</h5>
+        <p class="small text-muted">Learning resources, courses, and knowledge for all ages.</p>
+      </div>
+    </div>
+
+    <!-- Lifestyle -->
+    <div class="col-lg-3 col-md-6">
+      <div class="category-card text-center p-4 shadow-lg h-100 rounded-4">
+        <div class="icon-wrapper bg-gradient-danger mb-3">
+          <i class="bi bi-heart fs-1 text-white"></i>
+        </div>
+        <h5 class="fw-bold">Lifestyle</h5>
+        <p class="small text-muted">Health, fitness, fashion, and everyday inspiration.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="text-center mt-4">
+      <a href="all-category.php?type=all" class="btn btn-outline-primary">View All</a>
+    </div>
+  
+<br>
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+
+        <!-- About Section -->
+        <div class="col-md-3">
+          <h5 class="mb-3">About Us</h5>
+          <p>We provide modern solutions with Bootstrap and Font Awesome to make your websites beautiful and responsive.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Login</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Register</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Categories</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Contact</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Colombo, Sri Lanka</p>
+          <p><i class="fas fa-phone me-2"></i>[+94 11 2345678](tel:+94112345678)</p>
+          <p><i class="fas fa-envelope me-2"></i>info@example.com</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-3">
+          <h5 class="mb-3">Follow Us</h5>
+          <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="#" class="text-light"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+
+      </div>
+
+      <hr class="border-light">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2026 YourWebsite. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+      
+</body>
+
+</html>
