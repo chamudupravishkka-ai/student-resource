@@ -8,9 +8,20 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!--Bootstrap css and js-->
+<title>Student Resource Hub</title>
+<link rel="icon" type="image/png" href="site-img/fav.png">
 
 <link rel="stylesheet" type="text/css" href="css/root.css">
 <link rel="stylesheet" type="text/css" href="css/catdesign.css">
+
+  <style>
+    #mainCarousel h2{
+      text-shadow: 2px 2px 3px darkblue;
+    }
+     #mainCarousel p{
+      text-shadow: 1px 1px 2px black;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,14 +36,14 @@
 
     <!-- Center: Site Name -->
     <a class="navbar-brand mx-auto" href="index.html">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM_nKRnlhxGC885bISffrD32AhY3exJDvkLqP94_zZRA&s=10" 
+      <img src="site-img/logo.png" 
            alt="" class="logo me-2">
-      MySite.com
+      ResourceHub
     </a>
 
     <!-- Right: Logged User -->
     <a href="profile.html" class="btn d-flex align-items-center">
-      <img src="https://thfvnext.bing.com/th/id/OIP.FMyovTACaroGNo0PkUvIqgHaHa?w=217&h=216&c=7&r=0&o=7&cb=thfvnextfalcon2&pid=1.7&rm=3" 
+      <img src="user-icon/62739128729.webp" 
            alt="" class="logo me-2"> Hello123
       <!--<i class="bi bi-person-circle me-2"></i>-->
       
@@ -51,7 +62,7 @@
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link " href="index.html"><i class="bi bi-house"></i> Home</a></li>
       <li class="nav-item"><a class="nav-link " href="profile.html"><i class="bi bi-box-arrow-in-right"></i> Dashboard</a></li>
-      <li class="nav-item"><a class="nav-link " href="friends.html"><i class="bi bi-box-arrow-in-right"></i> Friends</a></li>
+      <li class="nav-item"><a class="nav-link " href="friends.html"><i class="bi bi-chat"></i> Friends</a></li>
       <li class="nav-item"><a class="nav-link " href="upload.html"><i class="bi bi-upload"></i> Upload</a></li>
       <li class="nav-item"><a class="nav-link " href="saved.html"><i class="bi bi-bookmark"></i> Saved</a></li>
       <li class="nav-item"><a class="nav-link " href="history.html"><i class="bi bi-clock-history"></i> History</a></li>
@@ -102,7 +113,7 @@
       </h2>
 
       <!-- Search Form -->
-      <form method="get" action="search-results.php">
+      <form method="get" action="search-results.html">
         <div class="row g-3 justify-content-center align-items-center">
          
           <div class="col-12 col-md-9">
@@ -158,9 +169,9 @@
     </div>
   </div>
 </div>  <h2 class="text-center fw-bold mb-5 text-gradient">For You</h2>
-  <div class="container my-5">
+  <div class="container my-5" >
   
-  <div class="row g-4">
+  <div class="row g-4" id="mainCard">
     <!-- Card -->
     <div class="col-lg-3 col-md-4 col-sm-6">
       <div class="card shadow-sm h-100">
@@ -176,7 +187,7 @@
           </button>
 
           <!-- Badge -->
-          <span class="badge bg-primary position-absolute top-0 start-0 m-2">PDF</span>
+          <span class="badge bg-danger position-absolute top-0 start-0 m-2">PDF</span>
         </div>
 
         <!-- Card body -->
@@ -194,7 +205,7 @@
           </div>
 
           <!-- Action button -->
-          <a href="#" class="btn btn-sm btn-danger">Open PDF</a>
+          <a href="preview.html?id=2345" class="btn btn-sm btn-danger">Open PDF</a>
         </div>
       </div>
     </div>
@@ -218,7 +229,7 @@
           <small class="text-muted">12 Jun 2026</small>
         </div>
       </div>
-      <a href="#" class="btn btn-sm btn-primary">Open Word</a>
+      <a href="preview.html?id=1115" class="btn btn-sm btn-primary">Open Word</a>
     </div>
   </div>
 </div>
@@ -243,7 +254,7 @@
           <small class="text-muted">12 Jun 2026</small>
         </div>
       </div>
-      <a href="#" class="btn btn-sm btn-success">Open Excel</a>
+      <a href="preview.html?id=2945" class="btn btn-sm btn-success">Open Excel</a>
     </div>
   </div>
 </div>
@@ -268,7 +279,7 @@
           <small class="text-muted">12 Jun 2026</small>
         </div>
       </div>
-      <a href="#" class="btn btn-sm btn-warning text-dark">Open PPT</a>
+      <a href="preview.html?id=7623" class="btn btn-sm btn-warning text-dark">Open PPT</a>
     </div>
   </div>
 </div>
@@ -293,7 +304,7 @@
           <small class="text-muted">12 Jun 2026</small>
         </div>
       </div>
-      <a href="#" class="btn btn-sm btn-secondary">Open ZIP</a>
+      <a href="preview.html?id=7355" class="btn btn-sm btn-secondary">Open ZIP</a>
     </div>
   </div>
 </div>
@@ -443,7 +454,7 @@ function escapeHtml(text) {
   </div>
 </div>
   <div class="text-center mt-4">
-      <a href="all-category.php?type=all" class="btn btn-outline-primary">View All</a>
+      <a href="all-category.html" class="btn btn-outline-primary">View All</a>
     </div>
   
 <br>
@@ -454,27 +465,29 @@ function escapeHtml(text) {
         <!-- About Section -->
         <div class="col-md-3">
           <h5 class="mb-3">About Us</h5>
-          <p>We provide modern solutions with Bootstrap and Font Awesome to make your websites beautiful and responsive.</p>
+          <p>We provide a collabarative hub for sharing resources,knowledge access and community connection</p>
         </div>
 
         <!-- Quick Links -->
         <div class="col-md-3">
           <h5 class="mb-3">Quick Links</h5>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Home</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Login</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Register</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Categories</a></li>
+            <li><a href="index.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+            <li><a href="login.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Login</a></li>
+            <li><a href="register.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Register</a></li>
+            <li><a href="all-category.html" class="text-light text-decoration-none"><i class="fas fa-angle-right me-2"></i>Categories</a></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div class="col-md-3">
           <h5 class="mb-3">Contact</h5>
-          <p><i class="fas fa-map-marker-alt me-2"></i>Colombo, Sri Lanka</p>
-          <p><i class="fas fa-phone me-2"></i>[+94 11 2345678](tel:+94112345678)</p>
-          <p><i class="fas fa-envelope me-2"></i>info@example.com</p>
-        </div>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Colombo,Sri Lanka</p>
+          <p><i class="fas fa-phone me-2"></i><a href="tel:0702473866" class="text-light text-decoration-none">0702473866</a> | <a href="tel:0721020034" class="text-light text-decoration-none">0721020034</a> </p>
+          <p class="d-flex align-items-start"><i class="fas fa-envelope me-2 mt-1"></i>
+          <span class="d-flex flex-column"><a href="mailto:chamudupravishkka@gmail.com" class="text-light text-decoration-none">chamudupravishkka@gmail.com</a><a href="mailto:dushaneranda0803@gmail.com" class="text-light text-decoration-none">dushaneranda0803@gmail.com</a>
+          </span></p>
+          </div>
 
         <!-- Social Media -->
         <div class="col-md-3">
@@ -493,7 +506,6 @@ function escapeHtml(text) {
       </div>
     </div>
   </footer>
-      
-</body>
+  </body>
 
 </html>
