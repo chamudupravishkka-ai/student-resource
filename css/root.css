@@ -162,6 +162,10 @@
   .navbar-brand {
       font-size: 15px;
     }
+  nav .container-fluid{
+      --bs-gutter-x: 0;
+    }
+
 
     .logo{
         width: 30px;
