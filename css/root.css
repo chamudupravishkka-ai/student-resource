@@ -71,7 +71,6 @@
 }
 
 /* --- RWD Enhancements (Ensures it scales perfectly) --- */
-
 #mainCarousel .carousel-inner {
   height: 50vh;       /* Uses viewport height instead of a rigid min-height */
   min-height: 300px;  /* Safety fallback for tiny screens */
@@ -120,12 +119,35 @@
     height: 35px;
     border-radius: 50%;
 }
+.carousel-item img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.nav-link:hover{
+  color: black;
+}
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 220px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+     #mainCarousel .carousel-inner {
+      height: 220px;       /* Uses viewport height instead of a rigid min-height */
+      min-height: 220px;  /* Safety fallback for tiny screens */
+      max-height: 220px;  /* Keeps it from becoming too massive on ultrawide screens */
+}
+}
 /* --- Mobile Specific Tweaks --- */
 @media (max-width: 576px) {
   .caption-top-left {
-    #mainCarousel{
-  height: 175px;
-}
     top: 15px;
     left: 15px;
     max-width: 75%;
@@ -142,8 +164,6 @@
         width: 30px;
         height: 30px;
     }
-  .navbar-brand {
-    font-size: 15px;
-  }
+   
 }
 
