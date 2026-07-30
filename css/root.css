@@ -71,9 +71,7 @@
 }
 
 /* --- RWD Enhancements (Ensures it scales perfectly) --- */
-#mainCarousel{
-  height: 200px;
-}
+
 #mainCarousel .carousel-inner {
   height: 50vh;       /* Uses viewport height instead of a rigid min-height */
   min-height: 300px;  /* Safety fallback for tiny screens */
@@ -125,6 +123,9 @@
 /* --- Mobile Specific Tweaks --- */
 @media (max-width: 576px) {
   .caption-top-left {
+    #mainCarousel{
+  height: 175px;
+}
     top: 15px;
     left: 15px;
     max-width: 75%;
@@ -141,5 +142,8 @@
         width: 30px;
         height: 30px;
     }
+  .navbar-brand {
+    font-size: 15px;
+  }
 }
 
