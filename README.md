@@ -1,5 +1,5 @@
-# Student Resource Hub (Frontend)
-Student Resource Hub is a responsive Frontend Web Application  designed for students and educators to easily browse, share, and access academic study materials, past papers, lecture notes, and learning resources.
+# Student Resource Hub
+Student Resource Hub is a responsive Web Application  designed for students and educators to easily browse, share, and access academic study materials, past papers, lecture notes, and learning resources.
 
 # Features
 
