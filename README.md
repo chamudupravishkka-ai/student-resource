@@ -11,7 +11,7 @@ Offcanvas Navigation Sidebar: Mobile-friendly slide-out navigation menu for smoo
 Complete UI Layouts: Includes templates for User Profile, Friends list, File Upload, Saved items, History, and Authentication (Login/Register).
 
 # Project Directory Structure
-
+```
 ResourceHub/
 ├── index.html            (Main Homepage)
 ├── profile.html          (Dashboard,Settings,Analytics,Help)
@@ -31,7 +31,7 @@ ResourceHub/
 ├── site-img              (Logos and Favicon assets)
 ├── ban_img               (Banner images)
 └── user-icon             (User profile) 
-
+```
 # Technologies Used
     HTML5
     CSS3
