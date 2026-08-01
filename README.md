@@ -5,7 +5,7 @@ Student Resource Hub is a responsive Web Application  designed for students and 
 
 Modern & Fully Responsive UI: Built with Bootstrap 5, optimized for mobile, tablet, and desktop screens.
 Interactive Search & Filter Interface: Pre-built UI components for keyword search, categories, date range selection, and sorting options (Relevance, Latest, Popular).
-Multi-Format File Cards: Visually distinct card designs for PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), and ZIP archives.
+Multi-Format File Cards: Visually distinct card designs for PDF, Word (.docx), Excel (.xlsx), PowerPoint (.pptx), and ZIP archives and etc.
 Dynamic Hero Carousel: Banner slider on the homepage to highlight main announcements and platform features.
 Offcanvas Navigation Sidebar: Mobile-friendly slide-out navigation menu for smooth user experience.
 Complete UI Layouts: Includes templates for User Profile, Friends list, File Upload, Saved items, History, and Authentication (Login/Register).
