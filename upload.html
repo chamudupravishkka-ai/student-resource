@@ -61,11 +61,22 @@
 </div>
 <div class="container py-5">
   <h2 class="text-center mb-4">📤 Upload Document</h2>
-
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card shadow-lg border-0 rounded-4">
         <div class="card-body p-4">
+          
+          <!-- Document Title -->
+          <div class="mb-4">
+            <label for="docTitle" class="form-label fw-bold">Document Title</label>
+            <input type="text" class="form-control" id="docTitle" name="docTitle" placeholder="Enter a clear title for your document">
+          </div>
+
+          <!-- Document Description -->
+          <div class="mb-4">
+            <label for="docDescription" class="form-label fw-bold">Description</label>
+            <textarea class="form-control" id="docDescription" name="docDescription" rows="3" placeholder="Provide a brief summary or details about this document..."></textarea>
+          </div>
 
           <!-- Upload Box -->
           <div class="mb-4 text-center">
