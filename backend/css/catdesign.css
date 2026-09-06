@@ -1,0 +1,35 @@
+.text-gradient {
+  background: linear-gradient(90deg, #f37123, #e44298, #16a98f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.category-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+}
+.bg-gradient-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+}
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #ffc107, #fd7e14);
+}
+.bg-gradient-danger {
+  background: linear-gradient(135deg, #dc3545, #e44298);
+}
